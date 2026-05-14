@@ -40,6 +40,6 @@ $server = Ratchet\Server\IoServer::factory(
             new Chat()
         )
     ),
-    8080
+    getenv('PORT') ?: 8080
 );
 $server->run();
